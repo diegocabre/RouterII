@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { MyContext } from "../context/MyContext";
 import { useNavigate } from "react-router";
+import "./Pokemon.css";
 
 const Pokemon = () => {
   const [selectName, setName] = useState(null);
@@ -17,14 +18,16 @@ const Pokemon = () => {
 
   return (
     <div>
-      <select name="" id="" onChange={(e) => selectPokemon(e.target.value)}>
+      <select app
+      
+      className="select" name="" id="" onChange={(e) => selectPokemon(e.target.value)}>
         {pokemons.results?.map((pokemon) => (
-          <option value={pokemon.name} key={pokemon.name}>
+          <option className="option" value={pokemon.name} key={pokemon.name}>
             {pokemon.name}
           </option>
         ))}
       </select>
-      <button onClick={showDetail}>Ver Detalle</button>
+      <button className="btn" onClick={showDetail}>Ver Detalle</button>
     </div>
   );
 };

@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import axios from "axios";
+import "./PokemonDetails.css";
+import { Card, CardImg, CardTitle, Button, CardBody } from "react-bootstrap";
 
 const PokemonDetails = () => {
   const [pokemon, setPokemon] = useState(null);
   const { name } = useParams();
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate("/pokemon");
+  }
 
   useEffect(() => {
     if (!name) return;
@@ -18,9 +25,11 @@ const PokemonDetails = () => {
   }, [name]);
   return (
     <div>
-      <h1>{pokemon?.name}</h1>
-      <img src={pokemon?.sprites?.front_default} alt="" />
-      <ul>
+      <Card className="card" style={{ width: "18rem" }}>
+      <CardTitle className="card-title">{pokemon?.name}</CardTitle>
+      <CardImg src={pokemon?.sprites?.front_default} alt="" className="card-img" />
+      <CardBody className="card-body">
+      <ul className="card-list">
         <li>Altura: {pokemon?.height}</li>
         <li>Peso: {pokemon?.weight}</li>
         <li>Tipo: {pokemon?.types?.[0]?.type?.name}</li>
@@ -31,7 +40,9 @@ const PokemonDetails = () => {
         <li>Abilidad 1: {pokemon?.abilities?.[0]?.ability?.name}</li>
         <li>Abilidad 2: {pokemon?.abilities?.[1]?.ability?.name}</li>
       </ul>
-      <button onClick={() => window.history.back()}>Volver</button>
+      </CardBody>
+      <Button className="button" onClick={goBack}>Volver</Button>
+      </Card>
     </div>
   );
 };

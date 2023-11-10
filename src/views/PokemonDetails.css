@@ -1,0 +1,49 @@
+.card-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card-img{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.card{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card-body{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.button{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: blue;
+}
