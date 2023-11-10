@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active{
+    color: rgb(251, 255, 0);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.inactive{
+    color: rgb(7, 7, 199);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    justify-content:flex-end;
+    gap: 20px;
+    align-items:center;
+    height: 50px;
+    background-color: rgb(189, 25, 25);
+}
